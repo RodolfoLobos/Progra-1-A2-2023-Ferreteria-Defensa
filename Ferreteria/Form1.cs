@@ -54,5 +54,36 @@ namespace Ferreteria
         {
 
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            SubMenu(PanelSubmenuModificar);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private Form activarformulario = null;
+        private void panelFormulario(Form Panelform)
+        {
+            if (activarformulario != null)
+                activarformulario.Close();
+            activarformulario = Panelform;
+            Panelform.TopLevel = false;
+            Panelform.FormBorderStyle = FormBorderStyle.None;
+            Panelform.Dock = DockStyle.Fill;
+            panelformula.Controls.Add(Panelform);
+            Panelform.Tag = Panelform;
+            Panelform.BringToFront();
+            Panelform.Show();
+
+        }
     }
 }

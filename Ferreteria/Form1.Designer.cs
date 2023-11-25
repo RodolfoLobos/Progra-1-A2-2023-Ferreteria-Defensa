@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenuIzquierdo = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -42,9 +43,14 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.panel = new System.Windows.Forms.Panel();
+            this.panelformula = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenuIzquierdo.SuspendLayout();
             this.panelAgregarSubmenu.SuspendLayout();
             this.PanelSubmenuModificar.SuspendLayout();
+            this.panelformula.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuIzquierdo
@@ -218,6 +224,7 @@
             this.button7.Text = "button7";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -233,6 +240,7 @@
             this.button8.Text = "button8";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnModificar
             // 
@@ -248,12 +256,47 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // panel
+            // 
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel.Location = new System.Drawing.Point(250, 465);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(817, 126);
+            this.panel.TabIndex = 1;
+            // 
+            // panelformula
+            // 
+            this.panelformula.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelformula.Controls.Add(this.pictureBox1);
+            this.panelformula.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelformula.Location = new System.Drawing.Point(250, 0);
+            this.panelformula.Name = "panelformula";
+            this.panelformula.Size = new System.Drawing.Size(817, 465);
+            this.panelformula.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(179, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(434, 369);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 591);
+            this.Controls.Add(this.panelformula);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.panelMenuIzquierdo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -262,6 +305,9 @@
             this.panelMenuIzquierdo.ResumeLayout(false);
             this.panelAgregarSubmenu.ResumeLayout(false);
             this.PanelSubmenuModificar.ResumeLayout(false);
+            this.panelformula.ResumeLayout(false);
+            this.panelformula.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,6 +328,9 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panelformula;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
